@@ -1,5 +1,17 @@
 extern crate clap;
 use clap::{Arg, App};
+use std::net::TcpStream;
+
+
+fn ping(port: &str) {
+    println!("PING {}", port);
+
+    if let Ok(_stream) = TcpStream::connect("127.0.0.1:".to_owned() + port) {
+        println!("{} alive!", port);
+    } else {
+        println!("Couldn't connect to server");
+    }
+}
 
 fn main() {
     let matches = App::new("Jaguar")
@@ -14,6 +26,6 @@ fn main() {
             .takes_value(true))
         .get_matches();
 
-    let port = matches.value_of("port");
-    println!("PORT: {:?}", port);
+    let port = matches.value_of("port").unwrap_or("test");
+    ping(port)
 }
