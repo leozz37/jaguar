@@ -1,0 +1,17 @@
+name: Jaguar
+version: "0.1"
+author: Leonardo Lima <leonardoaugusto287@gmail.com>
+about: Test socket connections
+args:
+    - port:
+        short: p
+        long: port
+        value_name: PORT
+        help: Port to be interacted with
+        takes_value: true
+    - hostname:
+        short: h
+        long: hostname
+        value_name: HOSTNAME
+        help: Hostname to be interacted with
+        takes_value: true

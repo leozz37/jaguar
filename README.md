@@ -1,3 +1,4 @@
+# Jaguar
 
 | Commands       | Description |
 | -------------- | ----------- |
@@ -7,3 +8,4 @@
 | -e, --echo     |
 | -p, --port     |
 | -h, --hostname |
+| -d, --data     |

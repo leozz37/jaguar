@@ -1,31 +1,26 @@
+#[macro_use]
 extern crate clap;
-use clap::{Arg, App};
+use clap::App;
 use std::net::TcpStream;
 
 
-fn ping(port: &str) {
-    println!("PING {}", port);
+fn ping(hostname: &str, port: &str) {
+    let address = hostname.to_owned() + ":" + port;
+    println!("PING {}", &address);
 
-    if let Ok(_stream) = TcpStream::connect("127.0.0.1:".to_owned() + port) {
-        println!("{} alive!", port);
+    if let Ok(_stream) = TcpStream::connect(&address) {
+        println!("{} alive!", &address);
     } else {
         println!("Couldn't connect to server");
     }
 }
 
 fn main() {
-    let matches = App::new("Jaguar")
-        .version("0.1")
-        .author("Leonardo Lima <leonardoaugusto287@gmail.com>")
-        .about("Test socket connetions")
-        .arg(Arg::with_name("port")
-            .short("p")
-            .long("port")
-            .value_name("PORT")
-            .help("Port to be interacted with")
-            .takes_value(true))
-        .get_matches();
+    let yaml = load_yaml!("../resources/cli.yml");
+    let matches = App::from_yaml(yaml).get_matches();
 
-    let port = matches.value_of("port").unwrap_or("test");
-    ping(port)
+    let hostname = matches.value_of("hostname").unwrap_or("127.0.0.1");
+    let port = matches.value_of("port").unwrap_or("");
+
+    ping(hostname, port)
 }
