@@ -15,3 +15,9 @@ args:
         value_name: HOSTNAME
         help: Hostname to be interacted with
         takes_value: true
+    - data:
+        short: d
+        long: data
+        value_name: DATA
+        help: Data to be sended
+        takes_value: true
