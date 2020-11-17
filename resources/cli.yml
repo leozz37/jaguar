@@ -8,6 +8,7 @@ args:
         long: port
         value_name: PORT
         help: Port to be interacted with
+        required: true
         takes_value: true
     - hostname:
         short: h
@@ -19,5 +20,5 @@ args:
         short: d
         long: data
         value_name: DATA
-        help: Data to be sended
+        help: Data to be sendedxw
         takes_value: true
