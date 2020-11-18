@@ -68,21 +68,25 @@ fn listen(hostname: &str, port: &str) {
     }
 }
 
-fn main() {
-    let yaml = load_yaml!("../resources/cli.yml");
-    let matches = App::from_yaml(yaml).get_matches();
-
+fn parse_arguments(matches: clap::ArgMatches) {
     let hostname = matches.value_of("hostname").unwrap_or("127.0.0.1");
     let port = matches.value_of("port").unwrap_or("");
-    let data = matches.value_of("data").unwrap_or("test");
 
     if matches.is_present("listen") {
         listen(hostname, port);
     }
     else if matches.is_present("send") {
+        let data = matches.value_of("data").unwrap_or("test");
         send(hostname, port, data);
     }
     else {
         ping(hostname, port);
     }
+}
+
+fn main() {
+    let yaml = load_yaml!("../resources/cli.yml");
+    let matches = App::from_yaml(yaml).get_matches();
+
+    parse_arguments(matches);
 }
