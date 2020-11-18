@@ -1,6 +1,7 @@
 # Jaguar 🐆
 
 ![Build](https://github.com/leozz37/jaguar/workflows/Build/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Jaguar is a simple tool for testing socket connections. You can send, listen and ping a port.
 
