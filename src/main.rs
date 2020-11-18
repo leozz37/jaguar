@@ -5,29 +5,27 @@ use std::net::{TcpListener, TcpStream};
 use std::thread;
 use std::io::Read;
 use std::io::Write;
-use std::process;
 use std::str;
 
+fn ping(hostname: &str, port: &str) {
+    let address = hostname.to_owned() + ":" + port;
+    println!("PING {}", &address);
 
-// fn ping(hostname: &str, port: &str) {
-//     let address = hostname.to_owned() + ":" + port;
-//     println!("PING {}", &address);
-
-//     if let Ok(_stream) = TcpStream::connect(&address) {
-//         println!("{} alive!", &address);
-//     } else {
-//         println!("Couldn't connect to server");
-//     }
-// }
+    if let Ok(_stream) = TcpStream::connect(&address) {
+        println!("{} alive!", &address);
+    } else {
+        println!("Couldn't connect to server");
+    }
+}
 
 // TODO: handle return and connection error
-// fn send(hostname: &str, port: &str, data: &str) -> std::io::Result<()> {
-//     let address = hostname.to_owned() + ":" + port;
-//     let mut stream = TcpStream::connect(address)?;
+fn send(hostname: &str, port: &str, data: &str) -> std::io::Result<()> {
+    let address = hostname.to_owned() + ":" + port;
+    let mut stream = TcpStream::connect(address)?;
 
-//     stream.write(data.as_bytes())?;
-//     Ok(())
-// }
+    stream.write(data.as_bytes())?;
+    Ok(())
+}
 
 fn handle_client(mut stream: TcpStream) {
     loop {
@@ -78,7 +76,13 @@ fn main() {
     let port = matches.value_of("port").unwrap_or("");
     let data = matches.value_of("data").unwrap_or("test");
 
-    // ping(hostname, port)
-    // send(hostname, port, data);
-    listen(hostname, port);
+    if matches.is_present("listen") {
+        listen(hostname, port);
+    }
+    else if matches.is_present("send") {
+        send(hostname, port, data);
+    }
+    else {
+        ping(hostname, port);
+    }
 }
