@@ -19,23 +19,20 @@ args:
     - data:
         short: d
         long: data
-        value_name: DATA
+        value_name: PAYLOAD
         help: Data to be sendedxw
         takes_value: true
     - listen:
         short: l
         long: listen
-        value_name: LISTEN
         conflicts_with: send
         help: Listen to a port
     - send:
         short: s
         long: send
-        value_name: SEND
         conflicts_with: listen
         help: Send payload to a port
     - alive:
         short: a
         long: alive
-        value_name: ALIVE
         help: Ping a port
