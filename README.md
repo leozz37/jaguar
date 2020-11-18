@@ -1,6 +1,7 @@
 # Jaguar 🐆
 
 ![Build](https://github.com/leozz37/jaguar/workflows/Build/badge.svg)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2d27b07a10874acbbbbe9c293ef594f3)](https://app.codacy.com/gh/leozz37/jaguar?utm_source=github.com&utm_medium=referral&utm_content=leozz37/jaguar&utm_campaign=Badge_Grade_Settings)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Jaguar is a simple tool for testing socket connections. You can send, listen and ping a port.
