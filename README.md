@@ -8,6 +8,16 @@
 
 Jaguar is a simple tool for testing socket connections. You can send, listen and ping a port.
 
+## Installing
+
+You can install using [homebrew](https://brew.sh/):
+
+```shell
+$ brew tap leozz37/jaguar
+
+$ brew install jaguar
+```
+
 ## Running
 
 You can use the --help option to check all the options:
