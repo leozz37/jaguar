@@ -77,7 +77,7 @@ fn parse_arguments(matches: clap::ArgMatches) {
     }
     else if matches.is_present("send") {
         let data = matches.value_of("data").unwrap_or("test");
-        send(hostname, port, data);
+        let _ = send(hostname, port, data);
     }
     else {
         ping(hostname, port);
