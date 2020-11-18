@@ -1,6 +1,9 @@
 # Jaguar 🐆
 
+[![CodeFactor](https://www.codefactor.io/repository/github/leozz37/jaguar/badge)](https://www.codefactor.io/repository/github/leozz37/jaguar)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/2b0fc19ee70e48588b060555026834a1)](https://www.codacy.com/gh/leozz37/jaguar/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=leozz37/jaguar&amp;utm_campaign=Badge_Grade)
 ![Build](https://github.com/leozz37/jaguar/workflows/Build/badge.svg)
+[![Documentation](https://codedocs.xyz/leozz37/jaguar.svg)](https://codedocs.xyz/leozz37/jaguar/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Jaguar is a simple tool for testing socket connections. You can send, listen and ping a port.
@@ -17,7 +20,6 @@ You can use the --help option to check all the options:
 | -p, --port     | Port to be interacted with     | Yes      | -         |
 | -h, --hostname | Hostname to be interacted with | No       | 127.0.0.1 |
 | -d, --data     | Payload to be sent             | No       | -         |
-
 
 You can run it with `cargo` to install all its dependencies:
 
