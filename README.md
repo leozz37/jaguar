@@ -8,6 +8,16 @@
 
 Jaguar is a simple tool for testing socket connections. You can send, listen and ping a port.
 
+## Installing
+
+You can install using [homebrew](https://brew.sh/):
+
+```shell
+$ brew tap leozz37/jaguar
+
+$ brew install jaguar
+```
+
 ## Running
 
 You can use the --help option to check all the options:
@@ -24,7 +34,7 @@ You can use the --help option to check all the options:
 You can run it with `cargo` to install all its dependencies:
 
 ```shell
-$ cargo run -- -p 3000
+$ jaguar -p 3000
 ```
 
 ### Listen
@@ -32,13 +42,13 @@ $ cargo run -- -p 3000
 To listen to a socket connection, run the following command:
 
 ```shell
-$ cargo run -- -l -p 3000
+$ jaguar -l -p 3000
 ```
 
 To listen to a custom hostname, use the `-h` flag:
 
 ```shell
-$ cargo run -- -l -p 3000 -h "127.0.0.1"
+$ jaguar -l -p 3000 -h "127.0.0.1"
 ```
 
 ### Send
@@ -46,13 +56,13 @@ $ cargo run -- -l -p 3000 -h "127.0.0.1"
 To send a payload to a socket connection, run the following command:
 
 ```shell
-$ cargo run -- -s -p 3000 -d "Hello World"
+$ jaguar -s -p 3000 -d "Hello World"
 ```
 
 To listen to a custom hostname, use the `-h` flag:
 
 ```shell
-$ cargo run -- -s -p 3000 -d "Hello World" -h "127.0.0.1"
+$ jaguar -s -p 3000 -d "Hello World" -h "127.0.0.1"
 ```
 
 ### Ping
@@ -60,7 +70,7 @@ $ cargo run -- -s -p 3000 -d "Hello World" -h "127.0.0.1"
 To ping a socket connection, run the following command:
 
 ```shell
-$ cargo run -- -p 3000
+$ jaguar -p 3000
 ```
 
 The `-a` flag is optional, ping is the default action of Jaguar.
