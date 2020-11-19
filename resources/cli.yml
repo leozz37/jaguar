@@ -20,7 +20,7 @@ args:
         short: d
         long: data
         value_name: PAYLOAD
-        help: Data to be sendedxw
+        help: Data to be send
         takes_value: true
     - listen:
         short: l
