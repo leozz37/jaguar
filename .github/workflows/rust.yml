@@ -16,12 +16,12 @@ jobs:
       - name: Repository checkout
         uses: actions/checkout@v2
 
-      - name: Install latest nightly
-        uses: actions-rs/toolchain@v1
-        with:
-            toolchain: nightly
-            override: true
-            components: rustfmt, clippy
+#       - name: Install latest nightly
+#         uses: actions-rs/toolchain@v1
+#         with:
+#             toolchain: nightly
+#             override: true
+#             components: rustfmt, clippy
 
       - name: Build
         run: cargo build --verbose
