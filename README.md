@@ -20,7 +20,7 @@ $ brew install jaguar
 
 ## Running
 
-You can use the --help option to check all the options:
+You can use the `--help` command to check all the options:
 
 | Argument       | Description                    | Required | Default   |
 | -------------- | ------------------------------ | -------- | --------- |
