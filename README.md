@@ -74,3 +74,7 @@ $ jaguar -p 3000
 ```
 
 The `-a` flag is optional, ping is the default action of Jaguar.
+
+### About
+
+Made with ❤️ by [leozz37](https://www.linkedin.com/in/leonardoaugustolima/)
