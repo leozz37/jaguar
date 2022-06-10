@@ -6,7 +6,7 @@
 [![Documentation](https://codedocs.xyz/leozz37/jaguar.svg)](https://codedocs.xyz/leozz37/jaguar/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Jaguar is a simple tool for testing socket connections. You can send, listen and ping a port.
+Jaguar is a simple tool for working with socket connections. You can send, listen and ping a port using your terminal.
 
 ## Installing
 
